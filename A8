@@ -2,12 +2,32 @@
 # Section 003
 # Decription
 
+#import library
+import random
 # Create Order Class
 
+class Order() :
+    def __init__(self) :
+        self.burger_count = 0
+
+
+    def randomBurgers(self) :
+        self.burger_count = random.randint(1,20)
+
 # Create a Person class
+class Person() :
+    def __init__(self) :
+        self.customer_name = ""
 
+    def randomName(self) :
+        lsCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
+        self.customer_name = (lsCustomers[random.randint(0,8)])
 # Create Customer class that inherits from the Person Class
-
+class Customer(Person) :
+    def __init__(self):
+        super().__init__()
+        self.order = Order()
+        self.queue = 
 # Create a variale for a Queue
 
 # Create a variable for a Dictionary with keys of type string and values of type int.
