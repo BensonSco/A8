@@ -1,4 +1,18 @@
-#
-#
-#
-# We did it
+# Names
+# Section 003
+# Decription
+
+# Create Order Class
+
+# Create a Person class
+
+# Create Customer class that inherits from the Person Class
+
+# Create a variale for a Queue
+
+# Create a variable for a Dictionary with keys of type string and values of type int.
+
+# Put 100 customers into the queue (a for loop is good for this)
+# Each customer object will already have a random number of burgers for each order when you create the customer object, so you just need to append the customer to the queue list.
+
+# Print out each customer and their total burgers ordered sorted by the most number of burgers ordered
