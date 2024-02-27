@@ -1,6 +1,6 @@
 # Andrew Malone
-# Section 003
-# This program uses OOP give the season stats on a women's soccer team based on random number generation. The season stats are then shown at the end. 
+# 
+# This program uses 0OP give the season stats on a women's soccer team based on random number generation. The season stats are then shown at the end. 
 
 # Inport Random Library
 import random
