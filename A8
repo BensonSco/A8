@@ -1,18 +1,19 @@
 # Team 10: Isabela De Matos, Kate Jeffries, Tyler Loose, Andrew Malone, Benson Scoffield, Christian Taylor 
 # Section 003
-# DESCRIPTION OF THE PROGRAM 
+# Description: Program keeps track of burger customers and their orders.
 
-#import random library
+# Import random library
 import random
 
 # Create Order Class
 class Order() :
     def __init__(self) :
-        self.burger_count = 0
+        self.burger_count = self.randomBurgers()
 
-#Create a Method to Randomly generate a burger count
+# Create a Method to Randomly generate a burger count
     def randomBurgers(self) :
-        self.burger_count = random.randint(1,20)
+        burger_count = random.randint(1,20)
+        return burger_count
 
 # Create a Person class
 class Person() :
@@ -24,20 +25,35 @@ class Person() :
         self.customer_name = (lsCustomers[random.randint(0,8)])
         return self.customer_name
     
-# Create Customer class that inherits from the Person Class
+# Customer class that inherits from the Person Class
 class Customer(Person) :
     def __init__(self):
         super().__init__()
         self.order = Order()
     
-# Create a Variable for a Queue and a Dictionary for the customer names   
+# Variable for a Queue and a Dictionary for the customer names   
 queue = []
 dictCustomers = {}
 
-# Put 100 customers into the queue (a for loop is good for this)
 
-# Each customer object will already have a random number of burgers for each order when you create the customer object, so you just need to append the customer to the queue list.
+# Put 100 customers into the queue
+for customers in range(0, 99) :
+    ocustomer = Customer()
+    queue.append(ocustomer)
+    
+
+# If statement to not repeat customer names but add burger count to the list
+    if ocustomer.customer_name in dictCustomers :
+        dictCustomers[ocustomer.customer_name] += ocustomer.order.burger_count
+    else :
+        dictCustomers[ocustomer.customer_name] = ocustomer.order.burger_count
+
 
 # Print out each customer and their total burgers ordered sorted by the most number of burgers ordered
+listSortedCustomers = sorted(dictCustomers.items(), key=lambda x: x[1],reverse=True)
 
-    
+# For loop evenly spaces the outputs
+for customer in listSortedCustomers :
+    customer_name = customer[0].ljust(19)
+    burgers_ordered = str(customer[1])
+    print(customer_name, burgers_ordered)
