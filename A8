@@ -1,38 +1,43 @@
-# Names
+# Team 10: Isabela De Matos, Kate Jeffries, Tyler Loose, Andrew Malone, Benson Scoffield, Christian Taylor 
 # Section 003
-# Decription
+# DESCRIPTION OF THE PROGRAM 
 
-#import library
+#import random library
 import random
-# Create Order Class
 
+# Create Order Class
 class Order() :
     def __init__(self) :
         self.burger_count = 0
 
-
+#Create a Method to Randomly generate a burger count
     def randomBurgers(self) :
         self.burger_count = random.randint(1,20)
 
 # Create a Person class
 class Person() :
     def __init__(self) :
-        self.customer_name = ""
+        self.customer_name = self.randomName()
 
     def randomName(self) :
         lsCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
         self.customer_name = (lsCustomers[random.randint(0,8)])
+        return self.customer_name
+    
 # Create Customer class that inherits from the Person Class
 class Customer(Person) :
     def __init__(self):
         super().__init__()
         self.order = Order()
-        self.queue = 
-# Create a variale for a Queue
-
-# Create a variable for a Dictionary with keys of type string and values of type int.
+    
+# Create a Variable for a Queue and a Dictionary for the customer names   
+queue = []
+dictCustomers = {}
 
 # Put 100 customers into the queue (a for loop is good for this)
+
 # Each customer object will already have a random number of burgers for each order when you create the customer object, so you just need to append the customer to the queue list.
 
 # Print out each customer and their total burgers ordered sorted by the most number of burgers ordered
+
+    
